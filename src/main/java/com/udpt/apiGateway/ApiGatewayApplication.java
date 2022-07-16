@@ -13,7 +13,9 @@ public class ApiGatewayApplication {
 	public RouteLocator myRoutes(RouteLocatorBuilder builder) {
 		return builder.routes()
 				.route(p -> p
-						.path("/customers/all", "/customers/login", "/customers/find")
+						.path("/customers/all", "/customers/login", "/customers/find",
+								"/products/syncProduct", "/products/syncProduct", "/products/all",
+								"/products//{productName}")
 						.uri("http://localhost:8001"))
 				.build();
 	}
